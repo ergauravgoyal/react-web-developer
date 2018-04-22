@@ -121,18 +121,9 @@ var Header = function Header(props) {
 
 Header.defaultProps = {
     title: 'Indecision'
-    // class Header extends React.Component {
-    //     render() {
-    //         return (
-    //             <div>
-    //                 <h1>{this.props.title}</h1>
-    //                 <h2>{this.props.subtitle}</h2>
-    //             </div>
-    //         )
-    //     }
-    // }
+};
 
-};var Action = function Action(props) {
+var Action = function Action(props) {
     return React.createElement(
         'div',
         null,
@@ -143,15 +134,7 @@ Header.defaultProps = {
         )
     );
 };
-// class Action extends React.Component {
-//     render() {
-//         return (
-//             <div>
-//                 <button onClick={this.props.handlePick} disabled={!this.props.hasOptions}>What should I do? </button>
-//             </div>
-//         )
-//     }
-// }
+
 //This component is to iterate option component
 var Options = function Options(props) {
     return React.createElement(
@@ -171,24 +154,6 @@ var Options = function Options(props) {
         React.createElement(Option, null)
     );
 };
-// class Options extends React.Component {
-
-//     render() {
-//         console.log();
-//         console.log(this.props.options.length);
-//         return (
-//             <div>
-//                 <button onClick={this.props.handleDeleteOptions}>Remove All</button>
-//                 {
-//                     this.props.options.map(
-//                         (option) => <Option key={option} optionText={option} />
-//                     )
-//                 }
-//                 <Option />
-//             </div>
-//         )
-//     }
-// }
 
 var Option = function Option(props) {
     return React.createElement(
@@ -205,15 +170,6 @@ var Option = function Option(props) {
         )
     );
 };
-// class Option extends React.Component {
-//     render() {
-//         return (
-//             <div>
-//             {this.props.optionText}
-//             </div>
-//         )
-//     }
-// }
 
 var AddOption = function (_React$Component2) {
     _inherits(AddOption, _React$Component2);
