@@ -1,33 +1,30 @@
-const add = function (a, b) {
-    return a + b;
-}
+// arguments object - no longer bound with arrow functions
 
-const addNumber = (a, b) => {
-    return a + b;
-}
+const add = (a, b) => {
+  // console.log(arguments);
+  return a + b;
+};
+console.log(add(55, 1, 1001));
+
+// this keyword - no longer bound
 
 const user = {
-    name: 'Gaurav',
-    cities: ['Florida', 'New York', 'Dublin'],
-    printPlacesLived() {
-        const cityMessages = this.cities.map((city) => {
-            return city;
-        })
-        this.cities.forEach((city) => {
-            console.log(this.name + " has lived in " + city)
-        });
-        return cityMessages;
-    }
+  name: 'Andrew',
+  cities: ['Philadelphia', 'New York', 'Dublin'],
+  printPlacesLived() {
+    return this.cities.map((city) => this.name + ' has lived in ' + city);
+  }
 };
-const multiplier={
-    numbers : [4,53,4,43],
-    multiplyBy:8,
-    multiply(){
-        const multipliedNumbers=this.numbers.map((number)=>{
-            return number*this.multiplyBy;
-        })
-        return multipliedNumbers;
-    }
-}
-console.log("Multiplication is ",multiplier.multiply());
 console.log(user.printPlacesLived());
+
+// Challenge area
+
+const multiplier = {
+  numbers: [10, 20, 30],
+  multiplyBy: 3,
+  multiply() {
+    return this.numbers.map((number) => number * this.multiplyBy);
+  }
+};
+
+console.log(multiplier.multiply());
